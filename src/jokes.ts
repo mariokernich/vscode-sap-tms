@@ -1,0 +1,112 @@
+/**
+ * Joke catalog for the SAP TMS (SAP Trolling Message System) extension.
+ *
+ * - `JokeLanguage` defines the supported UI languages.
+ * - `jokesDe` contains the German joke pool (kept in German on purpose).
+ * - `jokesEn` contains the English joke pool.
+ * - `getJokes(language)` returns the matching pool for the requested language.
+ */
+export type JokeLanguage = "de" | "en";
+
+// German jokes – intentionally kept in German as localized content.
+export const jokesDe: string[] = [
+    "Warum mögen Programmierer die Natur nicht? Zu viele Bugs.",
+    "Warum war der JavaScript-Entwickler traurig? Weil er sich nicht 'null' fühlte.",
+    "Wer SAP versteht, kann jedes System meistern. 💪🧠",
+    "Ohne Stammdaten ist SAP wie ein Auto ohne Räder. 🚗🛞",
+    "Ein guter SAP-Berater spart mehr als jedes Add-On. 🧾💡",
+    "UI5 ist nicht nur Code, es ist eine Lebenseinstellung. 💻🧘‍♂️",
+    "Wer in UI5 den Debugger liebt, fürchtet keine Fehler. 🐞🔍",
+    "SAP-Updates sind wie Weihnachten – keiner weiß, was kommt, aber alle müssen es feiern. 🎄🎁",
+    "SAP ist wie Lego – unendlich viele Bausteine, du musst nur wissen, wie man baut. 🧱🧠",
+    "Jede SAP Transaktion erzählt ihre eigene Geschichte. 📖",
+    "Fehler in SAP sind wie Ostereier – man sucht und findet sie immer wieder. 🥚🔎",
+    "SAP-Workflows sind wie Labyrinthe – der Weg ist das Ziel. 🌀",
+    "SAP Fehler sind wie Orakel – kryptisch, aber immer mit Bedeutung. 🔮",
+    "SAP ist nicht kompliziert – es ist nur konsequent logisch. 🧩",
+    "SAP: Software aus Deutschland, Geduld aus Stahl. 🇩🇪🧱",
+    "In SAP gibt’s für alles eine Transaktion – außer fürs Kaffeekochen. ☕️",
+    "Die wahre Liebe erkennt man daran, wenn jemand freiwillig SAP GUI öffnet. ❤️",
+    "SAP: der Ort, wo Buttons öfter grau sind als das Wetter. 🌧️",
+    "UI5-Entwickler sprechen fließend ODATA-Statements. 🧑‍💻📊",
+    "SAP-Screens: Schönheit liegt im Auge des Betrachters. 🎨",
+    "SAP macht Fehler sichtbar, die du nie gesucht hast. ⚠️👀",
+    "SAP: Der Weg von 'hä?' zu 'ach so!' ist oft nur ein Klick. 🤯➡️💡",
+    "In SAP gibt es keine Probleme, nur Features mit Erklärungspflicht. 📌📄",
+    "SAP: Wo jede Frage mit 'Kommt drauf an' beantwortet wird. 🤷‍♂️",
+    "Das schönste SAP-Kommando: /nEX. 🚪",
+    "SAP: Die Kunst, Daten im Kreis zu bewegen. 🔄",
+    "SAP ist wie Mathe: logisch, aber nicht immer verständlich. ➗🧠",
+    "Manchmal ist SAP schneller, wenn du langsamer klickst. 🐢⚡",
+    "In SAP ist der Weg das Ziel – und der Weg ist meist lang. 🛣️",
+    "Jeder SAP-User hat seine Lieblings-Transaktion. Was ist deine? ⭐",
+    "SAP: Drei Buchstaben, tausend Möglichkeiten. 🔠✨",
+    "SAP-Release Notes sind wie Thriller – voller Überraschungen. 📜😅",
+    "SAP-Schulungen sind wie Fitness: am Anfang anstrengend, später nützlich. 🏋️‍♂️",
+    "SAP ist wie ein Puzzle: alle Teile passen, aber keiner weiß sofort wie. 🧩🤔",
+    "SAP-Customizing ist wie Kochen – gleiche Zutaten, andere Rezepte. 🍲",
+    "SAP: Aus drei Klicks werden schnell mal drei Stunden. ⏳",
+    "Hier könnte Ihre Werbung stehen, schon ab 1,99 EUR pro Pixel. 📺💰",
+    "Bei Frontend Fehlern ist immer das Backend schuld. Funktioniert aber nur, solange man nicht selbst Backend entwickeln muss. 🧱➡️💥",
+    "Wenn man mehr arbeitet als erlaubt, ist das dann Arbeitszeitbetrug? 🤔",
+    "Virus erfolgreich installiert 🦠",
+    "Es läuft auf meinem Rechner. Problem gelöst. 💻🤷‍♂️",
+    "Code, den man versteht, ist offensichtlich unterdokumentiert. 📚🙈",
+    "'Nur ein kleiner Fix' – berühmte letzte Worte vor dem Release. 🧨",
+    "Git-Commit-Nachricht: 'fix stuff'. Was denn sonst. 📝😅",
+    "Wenn ein Bug nach dem Logging verschwindet, war er nur schüchtern. 🐛📜",
+];
+
+// English jokes – intentionally kept in English as localized content.
+export const jokesEn: string[] = [
+    "Why don't programmers like nature? It has too many bugs.",
+    "Why was the JavaScript developer sad? Because he didn't feel 'null'.",
+    "Whoever understands SAP can master any system. 💪🧠",
+    "Without master data, SAP is like a car without wheels. 🚗🛞",
+    "A good SAP consultant saves more than any add-on. 🧾💡",
+    "UI5 isn't just code, it's a lifestyle. 💻🧘‍♂️",
+    "Whoever loves the UI5 debugger fears no error. 🐞🔍",
+    "SAP updates are like Christmas – no one knows what's coming, but everyone has to celebrate. 🎄🎁",
+    "SAP is like Lego – infinite bricks, you just need to know how to build. 🧱🧠",
+    "Every SAP transaction tells its own story. 📖",
+    "Bugs in SAP are like Easter eggs – you keep searching and finding them. 🥚🔎",
+    "SAP workflows are like labyrinths – the journey is the destination. 🌀",
+    "SAP errors are like oracles – cryptic, but always meaningful. 🔮",
+    "SAP isn't complicated – it's just consistently logical. 🧩",
+    "SAP: Software from Germany, patience made of steel. 🇩🇪🧱",
+    "In SAP there's a transaction for everything – except making coffee. ☕️",
+    "True love is when someone voluntarily opens the SAP GUI. ❤️",
+    "SAP: the place where buttons are greyer than the weather. 🌧️",
+    "UI5 developers speak fluent OData. 🧑‍💻📊",
+    "SAP screens: beauty is in the eye of the beholder. 🎨",
+    "SAP reveals errors you were never looking for. ⚠️👀",
+    "SAP: The path from 'huh?' to 'aha!' is often just one click. 🤯➡️💡",
+    "In SAP there are no problems, only features that need explanation. 📌📄",
+    "SAP: Where every question is answered with 'It depends'. 🤷‍♂️",
+    "The most beautiful SAP command: /nEX. 🚪",
+    "SAP: The art of moving data in circles. 🔄",
+    "SAP is like math: logical, but not always understandable. ➗🧠",
+    "Sometimes SAP is faster when you click slower. 🐢⚡",
+    "In SAP, the journey is the destination – and the journey is usually long. 🛣️",
+    "Every SAP user has a favorite transaction. What's yours? ⭐",
+    "SAP: Drei Buchstaben, tausend Möglichkeiten. 🔠✨",
+    "SAP-Release Notes sind wie Thriller – voller Überraschungen. 📜😅",
+    "SAP-Schulungen sind wie Fitness: am Anfang anstrengend, später nützlich. 🏋️‍♂️",
+    "SAP ist wie ein Puzzle: alle Teile passen, aber keiner weiß sofort wie. 🧩🤔",
+    "SAP-Customizing ist wie Kochen – gleiche Zutaten, andere Rezepte. 🍲",
+    "SAP: Aus drei Klicks werden schnell mal drei Stunden. ⏳",
+    "Your ad could be here, starting at just $1.99 per pixel. 📺💰",
+    "Frontend bugs are always the backend's fault. Works great until you have to do the backend yourself. 🧱➡️💥",
+    "If you work more than allowed, is that time theft? 🤔",
+    "Some people don't believe in heroes – they just haven't met a UI5 expert yet. 🦸‍♂️",
+    "Virus successfully installed. 🦠",
+    "It works on my machine. Problem solved. 💻🤷‍♂️",
+    "Code you can understand is obviously under-documented. 📚🙈",
+    "'Just a small fix' – famous last words before a release. 🧨",
+    "Git commit message: 'fix stuff'. What else. 📝😅",
+    "When a bug disappears after adding logging, it was just shy. 🐛📜",
+];
+
+export function getJokes(language: JokeLanguage): string[] {
+    return language === "de" ? jokesDe : jokesEn;
+}

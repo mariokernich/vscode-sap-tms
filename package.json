@@ -1,0 +1,55 @@
+{
+    "name": "vscode-sap-tms",
+    "displayName": "SAP TMS – SAP Trolling Message System",
+    "description": "Shows a random joke (DE/EN) whenever VS Code starts.",
+    "version": "0.0.1",
+    "publisher": "mario",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "randomJoke.showJoke",
+                "title": "SAP TMS: Show a random joke"
+            }
+        ],
+        "configuration": {
+            "title": "SAP TMS",
+            "properties": {
+                "randomJoke.language": {
+                    "type": "string",
+                    "enum": [
+                        "auto",
+                        "de",
+                        "en"
+                    ],
+                    "enumDescriptions": [
+                        "Detect the language automatically from the VS Code locale",
+                        "German",
+                        "English"
+                    ],
+                    "default": "auto",
+                    "description": "Language used for the displayed jokes."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "@types/vscode": "^1.85.0",
+        "typescript": "^5.3.0"
+    }
+}
