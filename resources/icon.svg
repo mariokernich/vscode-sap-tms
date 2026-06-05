@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <defs>
+    <!-- SAP Horizon Dark Theme (Midnight Slate) Background Gradient -->
+    <linearGradient id="fiori-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1120" />
+      <stop offset="60%" stop-color="#121d30" />
+      <stop offset="100%" stop-color="#1b2a47" />
+    </linearGradient>
+
+    <!-- Fiori Horizon Aura / Radial Glowing Blobs -->
+    <radialGradient id="fiori-glowing-pink" cx="100%" cy="100%" r="90%">
+      <stop offset="0%" stop-color="#9526a9" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#9526a9" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#9526a9" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="fiori-glowing-cyan" cx="0%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#00a3f5" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#00a3f5" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#00a3f5" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Smooth Mint-Green Pastel Gradient for modern, elegant troll skin -->
+    <linearGradient id="fiori-troll-skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <!-- Sleek, High-DPI White Hard Hat Gradient with silver shadows -->
+    <linearGradient id="modern-helmet-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <!-- Delicate drop shadow for clean vector aesthetics -->
+    <filter id="fiori-soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- 1. Background Rounded Square Container (Horizon Evening Shell style) -->
+  <rect width="512" height="512" rx="90" fill="url(#fiori-bg-grad)" stroke="#1d2d44" stroke-width="4" />
+
+  <!-- Background Glowing Horizon Auras -->
+  <rect width="512" height="512" rx="90" fill="url(#fiori-glowing-pink)" />
+  <rect width="512" height="512" rx="90" fill="url(#fiori-glowing-cyan)" />
+
+  <!-- Thin Clean Tile Border Line (Fiori Launchpad Grid Card design) -->
+  <rect x="12" y="12" width="488" height="488" rx="78" fill="none" stroke="#2a3c54" stroke-width="2" opacity="0.6" />
+
+  <!-- 2. Symmetrical, Thin Code Brackets (Minimalist Line Art) -->
+  <!-- Left Curly Bracket { -->
+  <path d="M 70,170 C 52,170 42,192 42,217 L 42,230 C 42,242 34,248 24,256 C 34,264 42,270 42,282 L 42,295 C 42,320 52,342 70,342" 
+        fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" opacity="0.75" />
+  <!-- Right Curly Bracket } -->
+  <path d="M 442,170 C 460,170 470,192 470,217 L 470,230 C 470,242 478,248 488,256 C 478,264 470,270 470,282 L 470,295 C 470,320 460,342 442,342" 
+        fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" opacity="0.75" />
+
+  <!-- 3. CENTRAL SUBJECT: Simplified Abstract Troll Face with Hard Hat -->
+  <!-- This group utilizes clean 2D vectors with shadows and no heavy black cartoon brush-strokes -->
+  <g id="fiori-troll-avatar" filter="url(#fiori-soft-shadow)">
+    
+    <!-- Symmetrical Left Pointy Ear -->
+    <path d="M 175,270 C 135,268 115,225 110,230 Q 130,242 170,275 Z" fill="#10b981" />
+    <path d="M 165,268 C 135,264 122,234 118,236 Q 132,246 160,271 Z" fill="#047857" opacity="0.4" />
+
+    <!-- Symmetrical Right Pointy Ear -->
+    <path d="M 337,270 C 377,268 397,225 402,230 Q 382,242 342,275 Z" fill="#10b981" />
+    <path d="M 347,268 C 377,264 390,234 394,236 Q 380,246 352,271 Z" fill="#047857" opacity="0.4" />
+
+    <!-- Head Base Oval (Smooth) -->
+    <ellipse cx="256" cy="285" rx="85" ry="75" fill="url(#fiori-troll-skin)" />
+
+    <!-- Clean Eyes: Tilted, Sleek and Simple -->
+    <!-- Left Eye (Slanted Cheeky) -->
+    <path d="M 188,244 C 196,236 216,242 224,248 C 215,258 198,252 188,244 Z" fill="#a7f3d0" />
+    <path d="M 194,244 C 198,240 210,244 214,247 C 210,252 200,248 194,244 Z" fill="#10b981" />
+
+    <!-- Right Eye (Slanted Cheeky) -->
+    <path d="M 324,244 C 316,236 296,242 288,248 C 297,258 314,252 324,244 Z" fill="#a7f3d0" />
+    <path d="M 318,244 C 314,240 302,244 298,247 C 302,252 312,248 318,244 Z" fill="#10b981" />
+
+    <!-- Minimal Eyebrows -->
+    <path d="M 184,232 Q 206,220 226,236" stroke="#047857" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    <path d="M 328,232 Q 306,220 286,236" stroke="#047857" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+    <!-- Highly Stylized Cheeky Smile (Seamless crescent shape) -->
+    <path d="M 192,284 Q 256,336 320,284 Q 256,298 192,284 Z" fill="#042f2e" />
+
+    <!-- 4. Pure Corporate White Employee Hard Hat (Smooth Fiori Aesthetic) -->
+    <g id="modern-hardhat">
+      <!-- Dome structure -->
+      <path d="M 185,232 C 185,160 327,160 337,232 Z" fill="url(#modern-helmet-grad)" />
+      <!-- Stylized Center Support Ridge -->
+      <path d="M 252,168 C 252,168 256,155 256,196" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+      <path d="M 256,196 L 256,224" fill="none" stroke="#cbd5e1" stroke-width="3" />
+
+      <!-- Minimal Brim/Peak -->
+      <path d="M 160,225 C 160,225 256,215 352,225 C 360,226 358,234 348,234 C 290,238 222,238 164,234 C 154,234 152,226 160,225 Z" fill="#e2e8f0" />
+      
+      <!-- Minimalist Built-in blue Shield/Badge -->
+      <rect x="236" y="188" width="40" height="24" rx="4" fill="#0070F2" />
+      <!-- Tiny White Fiori/SAP logo outline -->
+      <text x="256" y="205" fill="#ffffff" font-family="'Segoe UI', -apple-system, sans-serif" font-weight="900" font-size="12" text-anchor="middle" letter-spacing="-0.5">SAP</text>
+    </g>
+  </g>
+
+  <!-- 5. Footer Text Area: Clean Capitalized "SAP TMS" inside Fiori style banner -->
+  <g id="fiori-footer-label">
+    <!-- Flat, Elegant, Modern Sans-Serif Typography -->
+    <text x="256" y="445" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">
+      <tspan fill="#ffffff" font-weight="800" font-size="38" letter-spacing="1">SAP </tspan>
+      <tspan fill="#00a3f5" font-weight="900" font-size="38" letter-spacing="1.5">TMS</tspan>
+    </text>
+    <text x="256" y="472" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="13" text-anchor="middle" letter-spacing="3.5">TROLLING MESSAGE SYSTEM</text>
+  </g>
+</svg>
