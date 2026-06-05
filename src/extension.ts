@@ -24,13 +24,13 @@ function getRandomJoke(): string {
 
 export function activate(context: vscode.ExtensionContext) {
     // Show a random joke on startup
-    vscode.window.showInformationMessage(`😂 ${getRandomJoke()}`);
+    vscode.window.showInformationMessage(`${getRandomJoke()}`);
 
     // Also register a command to show a joke on demand
     const disposable = vscode.commands.registerCommand(
         "randomJoke.showJoke",
         () => {
-            vscode.window.showInformationMessage(`😂 ${getRandomJoke()}`);
+            vscode.window.showInformationMessage(`${getRandomJoke()}`);
         },
     );
 
